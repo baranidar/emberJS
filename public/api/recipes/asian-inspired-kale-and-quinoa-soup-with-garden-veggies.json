@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "recipes",
+    "id": "asian-inspired-kale-and-quinoa-soup-with-garden-veggies",
+    "attributes": {
+      "title": "Asian Inspired Kale and Quinoa Soup with Garden Veggies",
+      "cuisine": "Asian",
+      "category": "Entree",
+      "rating": 5,
+      "description": "Coming soon",
+      "image": "http://shakthisfoodadventures.azurewebsites.net/Content/Images/Kale5.jpg"
+    }
+  }
+}

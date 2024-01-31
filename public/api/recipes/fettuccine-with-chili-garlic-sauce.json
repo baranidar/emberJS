@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "recipes",
+    "id": "fettuccine-with-chili-garlic-sauce",
+    "attributes": {
+      "title": "Fettuccine with Chili Garlic Sauce",
+      "cuisine": "Italian",
+      "category": "Entree",
+      "rating": 5,
+      "description": "Coming soon",
+      "image": "http://shakthisfoodadventures.azurewebsites.net/Content/Images/Fettuccine%20CG%20Sauce2.jpg"
+    }
+  }
+}

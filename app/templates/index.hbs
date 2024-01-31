@@ -1,0 +1,14 @@
+<Jumbo>
+  <h2>Welcome to chilli garlic</h2>
+  <p>Your personal recipe finder</p>
+  <LinkTo @route="about" class="button">About Us</LinkTo>
+  <LinkTo @route="contact" class="button">Contact Us</LinkTo>
+</Jumbo>
+
+<div class="recipes">
+  <ul class="results">
+    {{#each @model as |recipe|}}
+      <li><Recipe @recipe={{recipe}} /></li>
+    {{/each}}
+  </ul>
+</div>

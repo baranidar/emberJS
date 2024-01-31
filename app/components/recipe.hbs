@@ -1,0 +1,25 @@
+<article class="recipe">
+  <Recipe::Image
+    src={{@recipe.image}}
+    alt={{@recipe.title}}
+  />
+  <div class="details">
+    <h3>{{@recipe.title}}</h3>
+    <div class="recipe cuisine">
+      <span>Cuisine :</span> {{@recipe.cuisine}}
+    </div>
+    <div class="recipe category">
+      <span>Category :</span> {{@recipe.category}}
+    </div>
+    <div class="recipe rating">
+      <span>Rating :</span> {{@recipe.rating}}
+    </div>
+    <div class="recipe description">
+      <span>Description :</span> {{@recipe.description}}
+    </div>
+  </div>
+  <Vegan>
+    @width="10"
+    @height="10"
+  </Vegan>
+</article>
