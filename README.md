@@ -1,3 +1,11 @@
+ember s -- to start local dev server
+
+http://localhost:4200/ -- for website
+http://localhost:4200/tests -- for tests
+
+https://master--dazzling-kangaroo-56bb67.netlify.app/
+
+
 # chilli-garlic
 
 This README outlines the details of collaborating on this Ember application.
