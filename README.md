@@ -3,7 +3,7 @@ ember s -- to start local dev server
 http://localhost:4200/ -- for website
 http://localhost:4200/tests -- for tests
 
-https://master--dazzling-kangaroo-56bb67.netlify.app/
+https://shakthisfoodadventures.netlify.app/
 
 
 # chilli-garlic
