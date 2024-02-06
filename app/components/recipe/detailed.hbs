@@ -1,15 +1,23 @@
-<article class="recipe">
+<Jumbo>
+  <h2>{{@recipe.title}}</h2>
+  <ShareButton
+    @text="Check out the recipe for {{@recipe.title}}"
+    @hashtags="food,authentic"
+    @via="emberjs"
+  >
+    Share on Twitter
+  </ShareButton>
+</Jumbo>
+
+<article class="recipe detailed">
   <Recipe::Image
     src={{@recipe.image}}
-    alt={{@recipe.title}}
+    alt="A picture of {{@recipe.title}}"
   />
+
   <div class="details">
-    <h3>
-      <LinkTo @route="recipe" @model={{@recipe}}>
-        {{@recipe.title}}
-      </LinkTo>
-    </h3>
-    <div class="recipe cuisine">
+
+   <div class="recipe cuisine">
       <span>Cuisine :</span> {{@recipe.cuisine}}
     </div>
     <div class="recipe category">
@@ -22,8 +30,9 @@
       <span>Description :</span> {{@recipe.description}}
     </div>
   </div>
-  <Vegan>
+
+  <Vegan
     @width="10"
     @height="10"
-  </Vegan>
+  />
 </article>

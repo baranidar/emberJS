@@ -13,10 +13,8 @@ module('Integration | Component | vegan', function (hooks) {
     await render(hbs`<Vegan 
     src="/assets/images/Vegan.png"
     alt="Vegan?"
-    />`
-    );
+    />`);
     assert.dom().hasText('');
-    debugger;
     assert.dom('.image').exists();
   });
 });

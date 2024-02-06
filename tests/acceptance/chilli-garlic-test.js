@@ -1,5 +1,5 @@
 import { module, test } from 'qunit';
-import { click, visit, currentURL } from '@ember/test-helpers';
+import { click, find, visit, currentURL } from '@ember/test-helpers';
 import { setupApplicationTest } from 'chilli-garlic/tests/helpers';
 
 module('Acceptance | chilli garlic', function (hooks) {
@@ -30,6 +30,39 @@ module('Acceptance | chilli garlic', function (hooks) {
     await click('.jumbo a.button');
 
     assert.strictEqual(currentURL(), '/getting-in-touch');
+  });
+
+  test('viewing the details of a recipe', async function (assert) {
+    await visit('/');
+    assert.dom('.recipe').exists({ count: 15 });
+
+    await click('.recipe:first-of-type a');
+    assert.strictEqual(
+      currentURL(),
+      '/recipes/fettuccine-with-chili-garlic-sauce',
+    );
+  });
+
+  test('visiting /recipes/fettuccine-with-chili-garlic-sauce', async function (assert) {
+    await visit('/recipes/fettuccine-with-chili-garlic-sauce');
+    assert.strictEqual(
+      currentURL(),
+      '/recipes/fettuccine-with-chili-garlic-sauce',
+    );
+    assert.dom('nav').exists();
+    assert.dom('h1').containsText('ChilliGarlic');
+    assert.dom('.recipe.detailed').exists();
+    assert.dom('.share.button').hasText('Share on Twitter');
+
+    let button = find('.share.button');
+
+    let tweetURL = new URL(button.href);
+    assert.strictEqual(tweetURL.host, 'twitter.com');
+
+    assert.strictEqual(
+      tweetURL.searchParams.get('url'),
+      `${window.location.origin}/recipes/fettuccine-with-chili-garlic-sauce`,
+    );
   });
 
   test('visiting /getting-in-touch', async function (assert) {

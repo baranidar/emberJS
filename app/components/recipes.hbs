@@ -1,0 +1,14 @@
+<div class="recipes">
+  <label>
+    <span>Search for a recipe</span>
+    <Input @value={{this.query}} class="light" />
+  </label>
+
+  <ul class="results">
+    <Recipes::Filter @recipes={{@recipes}} @query={{this.query}} as |results|>
+      {{#each results as |recipe|}}
+        <li><Recipe @recipe={{recipe}} /></li>
+      {{/each}}
+    </Recipes::Filter>
+  </ul>
+</div>
